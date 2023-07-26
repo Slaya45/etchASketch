@@ -1,20 +1,19 @@
 #mainContainer {
     display: grid;
-    grid-template-columns: repeat(32, 2.49vh);
-    grid-template-rows: repeat(32, 2.49vh);
-    max-width: 85vh; 
-    max-height: 85vh; 
+    grid-template-columns: repeat(32, 2.5vh);
+    grid-template-rows: repeat(32, 2.5vh);
+    max-width: 84vh; 
+    max-height: 87vh; 
     position: absolute; 
+    z-index: 1;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
     border: 2vh solid red;
     border-top: 5vh solid red;
-    padding: .5vh;
-    margin: .5vh;
     overflow: hidden; 
-    min-width: 85vh; 
-    min-height: 85vh;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box; 
   }
   
@@ -28,5 +27,54 @@
     background: black; 
   }
   
+  #sketchName{
+    text-align: center;
+    position: absolute;
+    font-size: 3vh;
+    color: white;
+    font-weight: 700;
+    top: 4.3%; 
+    left: 44%; 
+    z-index: 3;
+  }
 
-  #sketchName
+  #leftArrow, #rightArrow, #upArrow, #downArrow {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 100%;
+    z-index: 3; 
+    position: absolute; 
+  }
+  
+  #leftArrow {
+    top: 95%; 
+    left: 30%;
+ 
+  }
+  
+  #rightArrow {
+    top: 85%; 
+    left: 40%; 
+  }
+  
+  #upArrow {
+    top: 85%; 
+    left: 50%; 
+  }
+  
+  #downArrow {
+    top: 85%; 
+    left: 60%; 
+  }
+
+  #borderContainer{
+    width: 84vh;
+    background-color: red;
+    height: 10vh;
+    top: 90%; 
+    left: 12.87%; 
+    position: absolute;
+    z-index: 2; 
+
+   
+  }
