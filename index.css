@@ -1,23 +1,32 @@
 #mainContainer {
     display: grid;
-    grid-template-columns: repeat(16, 5vh);
-    grid-template-rows: repeat(16, 5vh);
+    grid-template-columns: repeat(32, 2.49vh);
+    grid-template-rows: repeat(32, 2.49vh);
     max-width: 85vh; 
     max-height: 85vh; 
     position: absolute; 
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
-    border: 2vh solid black;
+    border: 2vh solid red;
+    border-top: 5vh solid red;
     padding: .5vh;
     margin: .5vh;
     overflow: hidden; 
+    min-width: 85vh; 
+    min-height: 85vh;
+    box-sizing: border-box; 
   }
   
   div {
-    background: red;
     width: 100%; 
     height: 100%;
     box-sizing: border-box; 
   }
   
+  div:hover {
+    background: black; 
+  }
+  
+
+  #sketchName
