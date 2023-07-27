@@ -1,9 +1,7 @@
-#mainContainer {
+#board {
     display: grid;
-    grid-template-columns: repeat(32, 2.5vh);
-    grid-template-rows: repeat(32, 2.5vh);
-    max-width: 84vh; 
-    max-height: 87vh; 
+    max-width: 600px; 
+    max-height: 600px; 
     position: absolute; 
     z-index: 1;
     top: 50%; 
@@ -33,48 +31,7 @@
     font-size: 3vh;
     color: white;
     font-weight: 700;
-    top: 4.3%; 
-    left: 44%; 
+    top: 18%; 
+    left: 43%; 
     z-index: 3;
-  }
-
-  #leftArrow, #rightArrow, #upArrow, #downArrow {
-    width: 7vh;
-    height: 7vh;
-    border-radius: 100%;
-    z-index: 3; 
-    position: absolute; 
-  }
-  
-  #leftArrow {
-    top: 95%; 
-    left: 30%;
- 
-  }
-  
-  #rightArrow {
-    top: 85%; 
-    left: 40%; 
-  }
-  
-  #upArrow {
-    top: 85%; 
-    left: 50%; 
-  }
-  
-  #downArrow {
-    top: 85%; 
-    left: 60%; 
-  }
-
-  #borderContainer{
-    width: 84vh;
-    background-color: red;
-    height: 10vh;
-    top: 90%; 
-    left: 12.87%; 
-    position: absolute;
-    z-index: 2; 
-
-   
   }

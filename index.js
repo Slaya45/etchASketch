@@ -1,13 +1,27 @@
 
-function generateChart() {
-    for (let i = 0; i < 1024; i++) {
-      let div = document.createElement("div");
-      document.getElementById("mainContainer").appendChild(div);
+document.addEventListener("DOMContentLoaded", function(){
+  generateChart(32);
+  console.log(test)
+})
 
-      div.style.width = "2.5vh";
-      div.style.height = "2.5vh";
-      div.style.background = "rgb(199, 199, 199)";
 
+function generateChart(size) {
+    
+      let board = document.querySelector("#board")
+
+      board.style.background = "rgb(199, 199, 199)";
+      board.style.gridTemplateColumns = `repeat(${size} 1fr)`;
+      board.style.gridTemplateRows = `repeat(${size} 1fr)`;
+
+      let numDivs = size * size;
+
+      for (let i = 0; i < numDivs; i++) {
+
+        let div = document.createElement("div");
+
+        board.insertAdjacentElement("beforeend". div);
+        
+  
       div.addEventListener("mouseover", function(){
         this.style.background = "black";
         this.removeEventListener("mouseover", arguments.callee);
