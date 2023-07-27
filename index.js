@@ -11,10 +11,11 @@ function changeGridSize(size) {
   numberGridBlocks = size;
   generateChart(numberGridBlocks);
 }
+
+// Remove all existing grid blocks from the board
 function clearBoard(){
 let gridBlock = document.querySelectorAll("#board > div");
 
-// Remove all existing grid blocks from the board
 gridBlock.forEach((div) => {
   div.remove();
 })};
@@ -49,7 +50,7 @@ function generateChart(size) {
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function gridDropdownList() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myGridDropdown").classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
