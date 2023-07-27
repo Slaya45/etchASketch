@@ -10,17 +10,25 @@
 
     <body>
 
-        <p id = sketchName>Etch-A-Sketch</p>
+        <div id = "header">Etch-A-Sketch</div>
+        <div id = "controlButtons">
+            <button onclick="gridDropdownList()" class="dropbtn">Grid Size</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#" onclick="changeGridSize(16)">16 X 16</a>
+              <a href="#" onclick="changeGridSize(32)">32 X 32</a>
+              <a href="#" onclick="changeGridSize(64)">64 X 64</a>
+            </div>
+
+          <button id = "clear-btn" onclick="clearBoard()">Clear</button>
+          <button id = "random-btn">Random</button>
+          <button id = "next-btn">Next</button>
+
+        </div>
+      </div>
 
         <div id = "board"></div>
         
-        <div>
-          <button>Select</button>
-          <button>Back</button>
-          <button>Random</button>
-          <button>Next</button>
-        </div>
-
+  
         
 
 
