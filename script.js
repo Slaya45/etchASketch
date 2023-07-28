@@ -1,4 +1,6 @@
 let numberGridBlocks = 0;
+const sizeSlider = document.getElementById('sizeSlider')
+
 
 document.addEventListener("DOMContentLoaded", function() {
   generateChart(numberGridBlocks);
@@ -19,7 +21,7 @@ function clearBoard() {
   });
 }
 
-//Generates a chart/grid inside the main container
+//Generates a grid inside the main container
 function generateChart(size) {
   let board = document.querySelector("#board");
 
