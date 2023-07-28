@@ -9,6 +9,7 @@ let numberGridBlocks = 0;
 //Changes the size of the grid according to the options listed
 function changeGridSize(size) {
   numberGridBlocks = size;
+  clearBoard()
   generateChart(numberGridBlocks);
 }
 
@@ -36,11 +37,13 @@ function generateChart(size) {
     board.insertAdjacentElement("beforeend", div);
   }
 
+
+  
 //Selects all of the grid blocks and tracks a mouseover, when activated it changes the color and removes the listener
   let gridBlocks = document.querySelectorAll("#board > div");
   gridBlocks.forEach((div) => {
     div.addEventListener("mouseover", function() {
-      this.style.background = "black";
+      this.style.background = "rgb( 0, 0, 0)";
       this.removeEventListener("mouseover", arguments.callee);
     });
   });

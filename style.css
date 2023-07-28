@@ -4,9 +4,11 @@
   color: rgb(0, 0, 0);
   font-weight: 700;
   padding-bottom: 1.5vh;
-  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  background: linear-gradient(to right, #565656, #d0d0d0);
 
 }
+
+
 #controlButtons{
   text-align: center;
   padding: .5vh;
@@ -42,6 +44,7 @@
     box-shadow: 10px 5px 5px black;
     z-index: 1;
   }
+  
   
   div {
     width: 100%; 
@@ -91,7 +94,7 @@
     #header {
       font-size: 4vh;
     }
-    
+  
     #controlButtons button {
       font-size: 2vh;
       margin: 1vh 0.5vh;
@@ -110,4 +113,6 @@
       max-width: 120px;
       padding: 2vw 3vw;
     }
+
   }
+  
