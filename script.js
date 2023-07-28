@@ -1,32 +1,29 @@
+let numberGridBlocks = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
   generateChart(numberGridBlocks);
 });
 
-
-let numberGridBlocks = 0;
-
-//Changes the size of the grid according to the options listed
+// Changes the size of the grid according to the options listed
 function changeGridSize(size) {
   numberGridBlocks = size;
-  clearBoard()
+  clearBoard();
   generateChart(numberGridBlocks);
 }
 
 // Remove all existing grid blocks from the board
-function clearBoard(){
-let gridBlock = document.querySelectorAll("#board > div");
-
-gridBlock.forEach((div) => {
-  div.remove();
-})};
-
+function clearBoard() {
+  let gridBlock = document.querySelectorAll("#board > div");
+  gridBlock.forEach((div) => {
+    div.remove();
+  });
+}
 
 //Generates a chart/grid inside the main container
 function generateChart(size) {
   let board = document.querySelector("#board");
 
-  board.style.background = "rgb(199, 199, 199)";
+  board.style.background = "rgb(255, 255, 255)";
   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
@@ -35,20 +32,14 @@ function generateChart(size) {
   for (let i = 0; i < numDivs; i++) {
     let div = document.createElement("div");
     board.insertAdjacentElement("beforeend", div);
-  }
 
-
-  
-//Selects all of the grid blocks and tracks a mouseover, when activated it changes the color and removes the listener
-  let gridBlocks = document.querySelectorAll("#board > div");
-  gridBlocks.forEach((div) => {
+    // Add mouseover event listener to change color on mouseover
     div.addEventListener("mouseover", function() {
-      this.style.background = "rgb( 0, 0, 0)";
-      this.removeEventListener("mouseover", arguments.callee);
+      let colorInput = document.querySelector("#color");
+      div.style.background = colorInput.value;
     });
-  });
+  }
 }
-
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
